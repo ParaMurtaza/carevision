@@ -1,0 +1,16 @@
+/* Styles for the new backend-connected UI (login modal, upload modal). Uses your existing CSS variables. */
+.cv-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.65); display: none; align-items: center; justify-content: center; z-index: 10000; }
+.cv-overlay.open { display: flex; }
+.cv-box { position: relative; width: min(92vw, 420px); background: var(--bg-mid, #0a1628); border: 1px solid var(--border-b, rgba(59,130,246,.3)); border-radius: 16px; padding: 28px; color: #fff; display: flex; flex-direction: column; gap: 12px; }
+.cv-box h3 { font-family: 'Syne', sans-serif; margin: 0; }
+.cv-box input, .cv-box select { padding: 12px; border-radius: 10px; border: 1px solid rgba(148,163,184,.3); background: rgba(255,255,255,.05); color: #fff; font: inherit; }
+.cv-close { position: absolute; top: 10px; right: 14px; background: none; border: 0; color: #94a3b8; font-size: 26px; cursor: pointer; }
+.cv-note { color: var(--text-muted, #94a3b8); font-size: 14px; margin: 0; }
+.cv-error { color: #f87171; font-size: 14px; margin: 0; min-height: 1em; }
+.cv-submit { cursor: pointer; border: 0; }
+.cv-switch { text-align: center; font-size: 14px; margin: 0; }
+.cv-switch a { color: var(--blue-light, #60a5fa); }
+.cv-hello { color: var(--green-light, #4ade80); margin-right: 8px; }
+.cv-result { background: rgba(34,197,94,.08); border: 1px solid var(--border-g, rgba(34,197,94,.3)); border-radius: 10px; padding: 12px; font-size: 14px; }
+.cv-result ul { margin: 8px 0 8px 18px; }
+.cv-fab { position: fixed; left: 20px; bottom: 20px; z-index: 9000; padding: 12px 18px; border-radius: 999px; border: 0; cursor: pointer; background: var(--green, #16a34a); color: #fff; font-weight: 600; }

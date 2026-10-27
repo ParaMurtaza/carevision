@@ -1,0 +1,38 @@
+/* Styles for the 3 AI agents section + Cara chat widget. Uses your existing CSS variables. */
+#agents { padding-top: 4rem; }
+.ag-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+.ag-card { background: var(--bg-card, rgba(5,14,26,.75)); border: 1px solid var(--border-b, rgba(59,130,246,.2)); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; gap: .75rem; }
+.ag-card h4 { font-family: 'Syne', sans-serif; margin: 0; }
+.ag-card p { color: var(--text-muted, #94a3b8); font-size: .92rem; margin: 0; }
+.ag-card input[type=file], .ag-card textarea { width: 100%; padding: .6rem; border-radius: 10px; border: 1px solid rgba(148,163,184,.3); background: rgba(255,255,255,.04); color: #fff; font: inherit; font-size: .88rem; }
+.ag-btn { cursor: pointer; border: 0; align-self: flex-start; }
+.ag-btn[disabled] { opacity: .6; cursor: wait; }
+.ag-preview { max-width: 100%; max-height: 180px; object-fit: contain; border-radius: 10px; }
+.ag-disclaimer { text-align: center; color: var(--text-muted, #94a3b8); font-size: .85rem; margin-top: 1.5rem; }
+
+.ag-result:empty { display: none; }
+.ag-result { background: rgba(255,255,255,.03); border: 1px solid rgba(148,163,184,.2); border-radius: 12px; padding: 1rem; font-size: .88rem; color: #e2e8f0; }
+.ag-result h5 { margin: .8rem 0 .3rem; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--green-light, #4ade80); }
+.ag-result h5:first-child { margin-top: 0; }
+.ag-result ul { margin: 0 0 0 1.1rem; padding: 0; }
+.ag-result li { margin: .15rem 0; }
+.ag-result .ag-sub { color: var(--text-muted, #94a3b8); font-size: .8rem; margin-top: .6rem; }
+.ag-badge { display: inline-block; padding: .15rem .6rem; border-radius: 999px; font-size: .75rem; font-weight: 600; margin-right: .4rem; }
+.ag-badge.routine { background: rgba(34,197,94,.18); color: #4ade80; }
+.ag-badge.soon { background: rgba(250,204,21,.18); color: #facc15; }
+.ag-badge.urgent { background: rgba(239,68,68,.2); color: #f87171; }
+.ag-error { color: #f87171; }
+
+/* Cara chat widget (above the clinician toggle at bottom-right) */
+.cara-bubble { position: fixed; right: 24px; bottom: 84px; z-index: 98; padding: .75rem 1.25rem; border-radius: 100px; border: 0; cursor: pointer; background: var(--blue-mid, #2563eb); color: #fff; font-weight: 600; box-shadow: 0 8px 30px rgba(0,0,0,.4); }
+.cara-panel { position: fixed; right: 24px; bottom: 140px; z-index: 9500; width: min(92vw, 360px); height: 460px; display: none; flex-direction: column; background: var(--bg-mid, #0a1628); border: 1px solid var(--border-b, rgba(59,130,246,.3)); border-radius: 16px; overflow: hidden; }
+.cara-panel.open { display: flex; }
+.cara-head { padding: .8rem 1rem; display: flex; justify-content: space-between; align-items: center; background: rgba(59,130,246,.15); font-weight: 600; }
+.cara-head button { background: none; border: 0; color: #94a3b8; font-size: 22px; cursor: pointer; }
+.cara-msgs { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .6rem; }
+.cara-msg { max-width: 85%; padding: .55rem .8rem; border-radius: 12px; font-size: .9rem; line-height: 1.4; white-space: pre-wrap; }
+.cara-msg.ai { background: rgba(255,255,255,.07); align-self: flex-start; }
+.cara-msg.user { background: var(--blue-mid, #2563eb); align-self: flex-end; }
+.cara-input { display: flex; gap: .5rem; padding: .7rem; border-top: 1px solid rgba(148,163,184,.2); }
+.cara-input input { flex: 1; padding: .6rem; border-radius: 10px; border: 1px solid rgba(148,163,184,.3); background: rgba(255,255,255,.05); color: #fff; font: inherit; }
+.cara-input button { border: 0; border-radius: 10px; padding: 0 1rem; background: var(--green, #16a34a); color: #fff; cursor: pointer; }
